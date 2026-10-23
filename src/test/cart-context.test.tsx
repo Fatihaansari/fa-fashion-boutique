@@ -1,4 +1,4 @@
-import { act, beforeEach, render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { expect, it, describe } from "vitest";
 
 import { CartProvider, useCart } from "@/lib/cart";
@@ -26,11 +26,8 @@ function Probe() {
 }
 
 describe("cart context", () => {
-  beforeEach(() => {
-    localStorage.clear();
-  });
-
   it("adds items, merges duplicate size/colour lines and computes totals", () => {
+    localStorage.clear();
     render(
       <CartProvider>
         <Probe />
@@ -51,6 +48,7 @@ describe("cart context", () => {
   });
 
   it("updates quantity and removes lines", () => {
+    localStorage.clear();
     render(
       <CartProvider>
         <Probe />
