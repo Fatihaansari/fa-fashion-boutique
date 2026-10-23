@@ -18,15 +18,7 @@ Make the website fully responsive, visually polished, fast, and mobile-friendly.
 
 Prepare the project for GitHub and Vercel deployment. Test all major features and ensure the production build works.use this material
 
-This project was built with [Lovable](https://lovable.dev).
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/60167d82-014f-49b8-b0f4-d6b54b6d41d4).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
