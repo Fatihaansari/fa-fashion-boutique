@@ -8,3 +8,11 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Storefront is frontend-only: cart persists in `localStorage` (`outfit-by-fa-cart-v1`), orders are demo data (`outfit-by-fa-last-order`). No Lovable Cloud tables are used.
+- All cart/checkout money math must go through `computeTotals` in `src/lib/cart-math.ts` (single source of truth; free delivery ≥ Rs 6,000, flat Rs 250 below).
+- Prices are stored in whole PKR in `src/lib/products.ts` and formatted only via `formatPKR`.
+- Product imagery lives in `src/assets/` as ES6 imports; the brand logo is `src/assets/logo.png` (circular, also favicon in `public/favicon.png`).
+
