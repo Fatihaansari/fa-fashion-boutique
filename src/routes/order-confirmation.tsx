@@ -56,7 +56,7 @@ function OrderConfirmation() {
     <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:py-20">
       <div className="text-center">
         <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-accent/20">
-          <Check className="h-7 w-7 text-accent-foreground" strokeWidth={2} />
+          <Check className="h-7 w-7 text-accent" strokeWidth={2} />
         </span>
         <p className="eyebrow mt-6 text-muted-foreground">Order placed</p>
         <h1 className="mt-2 font-display text-4xl font-medium sm:text-5xl">

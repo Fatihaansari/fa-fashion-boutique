@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail } from "lucide-react";
 
+import logoUrl from "@/assets/logo.png";
 import { categories } from "@/lib/products";
 
 export function SiteFooter() {
@@ -8,7 +9,8 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-secondary/60">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-10">
         <div className="sm:col-span-2 lg:col-span-1">
-          <p className="font-display text-2xl font-semibold tracking-[0.08em]">
+          <img src={logoUrl} alt="Outfit by FA logo" className="h-14 w-14 rounded-full shadow-sm" />
+          <p className="mt-4 font-display text-2xl font-semibold tracking-[0.08em]">
             OUTFIT <span className="italic font-medium">by</span> FA
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">

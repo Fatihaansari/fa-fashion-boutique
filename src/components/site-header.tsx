@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { Instagram, Menu, ShoppingBag, X } from "lucide-react";
 
+import logoUrl from "@/assets/logo.png";
 import { useCart } from "@/lib/cart";
 import { categories } from "@/lib/products";
 
@@ -40,11 +41,16 @@ export function SiteHeader() {
           </button>
         </div>
 
-        <Link to="/" className="flex shrink-0 flex-col items-center leading-none sm:items-start">
-          <span className="font-display text-2xl font-semibold tracking-[0.08em] text-foreground sm:text-[1.7rem]">
-            OUTFIT <span className="italic font-medium">by</span> FA
+        <Link to="/" className="flex shrink-0 items-center gap-2.5 leading-none">
+          <img src={logoUrl} alt="" className="h-11 w-11 rounded-full shadow-sm" />
+          <span className="flex min-w-0 flex-col leading-none">
+            <span className="truncate font-display text-xl font-semibold tracking-[0.08em] text-foreground sm:text-[1.7rem]">
+              OUTFIT <span className="italic font-medium">by</span> FA
+            </span>
+            <span className="eyebrow mt-1 hidden text-[0.5rem] text-muted-foreground sm:block">
+              Premium Womenswear
+            </span>
           </span>
-          <span className="eyebrow mt-0.5 text-[0.5rem] text-muted-foreground">Est. Karachi</span>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
