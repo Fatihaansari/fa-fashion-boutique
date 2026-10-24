@@ -6,14 +6,16 @@ import { formatPKR } from "@/lib/format";
 import { loadOrder, type Order } from "@/lib/order";
 
 export const Route = createFileRoute("/order-confirmation")({
-  head: () => [
-    { title: "Order Confirmed — Outfit by FA" },
-    { name: "description", content: "Thank you for your order — Outfit by FA." },
-    { property: "og:title", content: "Order Confirmed — Outfit by FA" },
-    { property: "og:description", content: "Thank you for your order." },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-  ],
+  head: () => ({
+    meta: [
+      { title: "Order Confirmed — Outfit by FA" },
+      { name: "description", content: "Thank you for your order — Outfit by FA." },
+      { property: "og:title", content: "Order Confirmed — Outfit by FA" },
+      { property: "og:description", content: "Thank you for your order." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: OrderConfirmation,
 });
 

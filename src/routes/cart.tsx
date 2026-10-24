@@ -7,17 +7,19 @@ import { FREE_SHIPPING_THRESHOLD } from "@/lib/cart-math";
 import { formatPKR } from "@/lib/format";
 
 export const Route = createFileRoute("/cart")({
-  head: () => [
-    { title: "Your Cart — Outfit by FA" },
-    {
-      name: "description",
-      content: "Review your bag, adjust quantities and check out — Outfit by FA.",
-    },
-    { property: "og:title", content: "Your Cart — Outfit by FA" },
-    { property: "og:description", content: "Review your bag and check out." },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-  ],
+  head: () => ({
+    meta: [
+      { title: "Your Cart — Outfit by FA" },
+      {
+        name: "description",
+        content: "Review your bag, adjust quantities and check out — Outfit by FA.",
+      },
+      { property: "og:title", content: "Your Cart — Outfit by FA" },
+      { property: "og:description", content: "Review your bag and check out." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: CartPage,
 });
 

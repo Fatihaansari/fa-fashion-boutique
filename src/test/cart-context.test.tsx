@@ -57,6 +57,8 @@ describe("cart context", () => {
 
     act(() => {
       screen.getByText("add-shirt").click();
+    });
+    act(() => {
       screen.getByText("qty-3").click();
     });
     expect(screen.getByTestId("count").textContent).toBe("3");
