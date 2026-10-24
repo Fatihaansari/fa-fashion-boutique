@@ -162,6 +162,7 @@ export const products: Product[] = [
     name: "Oatmeal Ribbed Knit Set",
     category: "sets",
     price: 5290,
+    image: knitSet,
     badge: "New In",
     description:
       "A two-piece moment: short-sleeve ribbed top and matching A-line midi skirt in a cozy oatmeal knit. Wear together or split across the week.",
@@ -179,6 +180,7 @@ export const products: Product[] = [
     name: "Sage Satin Midi Dress",
     category: "dresses",
     price: 4790,
+    image: sageDress,
     featured: true,
     description:
       "Liquid-soft satin in a muted sage, cut on the bias with a cowl neckline and delicate straps. Skims the body and pools just right at the midi hem.",
@@ -200,6 +202,7 @@ export const products: Product[] = [
     name: "The Camel Trench",
     category: "outerwear",
     price: 8490,
+    image: camelTrench,
     description:
       "The finishing layer. A classic double-breasted trench in warm camel with storm flap, buckled cuffs and a detachable belt — cut long and clean.",
     details: [

@@ -15,9 +15,10 @@ function parseCategory(value: unknown): CategorySlug | undefined {
 }
 
 export const Route = createFileRoute("/shop")({
-  validateSearch: (search: Record<string, unknown>): ShopSearch => ({
-    category: parseCategory(search["category"]),
-  }),
+  validateSearch: (search: Record<string, unknown>): ShopSearch => {
+    const category = parseCategory(search["category"]);
+    return category ? { category } : {};
+  },
   head: () => ({
     meta: [
       { title: "Shop All — Outfit by FA" },
