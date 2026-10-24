@@ -16,23 +16,26 @@ function parseCategory(value: unknown): CategorySlug | undefined {
 
 export const Route = createFileRoute("/shop")({
   validateSearch: (search: Record<string, unknown>): ShopSearch => ({
-    category: parseCategory(search.category),
+    category: parseCategory(search["category"]),
   }),
-  head: ({ search }) => {
-    const label = search.category ? categoryLabels[search.category] : null;
-    const title = label ? `${label} — Outfit by FA` : "Shop All — Outfit by FA";
-    const description = label
-      ? `Shop ${label.toLowerCase()} from Outfit by FA — premium womenswear in quiet neutrals.`
-      : "Shop the full Outfit by FA collection — oversized shirts, wide-leg jeans, dresses, knit sets and outerwear.";
-    return [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
+  head: () => ({
+    meta: [
+      { title: "Shop All — Outfit by FA" },
+      {
+        name: "description",
+        content:
+          "Shop the full Outfit by FA collection — oversized shirts, wide-leg jeans, dresses, knit sets and outerwear.",
+      },
+      { property: "og:title", content: "Shop All — Outfit by FA" },
+      {
+        property: "og:description",
+        content:
+          "Shop the full Outfit by FA collection — oversized shirts, wide-leg jeans, dresses, knit sets and outerwear.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-    ];
-  },
+    ],
+  }),
   component: Shop,
 });
 

@@ -7,14 +7,16 @@ import { formatPKR } from "@/lib/format";
 import { newOrderId, saveOrder, type Order } from "@/lib/order";
 
 export const Route = createFileRoute("/checkout")({
-  head: () => [
-    { title: "Checkout — Outfit by FA" },
-    { name: "description", content: "Complete your order — cash on delivery or bank transfer." },
-    { property: "og:title", content: "Checkout — Outfit by FA" },
-    { property: "og:description", content: "Complete your order." },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-  ],
+  head: () => ({
+    meta: [
+      { title: "Checkout — Outfit by FA" },
+      { name: "description", content: "Complete your order — cash on delivery or bank transfer." },
+      { property: "og:title", content: "Checkout — Outfit by FA" },
+      { property: "og:description", content: "Complete your order." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: CheckoutPage,
 });
 

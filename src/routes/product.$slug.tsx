@@ -16,21 +16,22 @@ export const Route = createFileRoute("/product/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData?.product) {
-      return [
-        { title: "Product unavailable — Outfit by FA" },
-        { name: "robots", content: "noindex" },
-      ];
+      return {
+        meta: [{ title: "Product unavailable — Outfit by FA" }, { name: "robots", content: "noindex" }],
+      };
     }
     const { name, description } = loaderData.product;
     const title = `${name} — Outfit by FA`;
-    return [
-      { title },
-      { name: "description", content: description.slice(0, 155) },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description.slice(0, 155) },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ];
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description.slice(0, 155) },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description.slice(0, 155) },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+    };
   },
   component: ProductPage,
 });
