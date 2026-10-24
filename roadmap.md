@@ -4,8 +4,9 @@
 - [x] Design system (cream neutrals + brand pink accent), fonts
 - [x] Product catalog (7 pieces from the reference aesthetic)
 - [x] Home, shop (+ category filter), product detail
-- [ ] Cart page with quantity controls + totals
-- [ ] Checkout form + order confirmation demo
-- [ ] Header/footer logo integration
-- [ ] Tests (cart math), build + end-to-end verification
-- [ ] Deployment prep notes (GitHub/Vercel)
+- [x] Cart page with quantity controls + totals
+- [x] Checkout form + order confirmation demo
+- [x] Header/footer logo integration
+- [x] Tests (cart math + cart context), end-to-end flow verified in preview
+- [x] All product images verified loading; no console errors
+- [ ] User publishes when ready (GitHub sync via Project settings → Git)
