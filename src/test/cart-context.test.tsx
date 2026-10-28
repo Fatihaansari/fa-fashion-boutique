@@ -16,7 +16,7 @@ function Probe() {
       >
         add-shirt
       </button>
-      <button onClick={() => addItem(getProduct("sage-satin-midi-dress")!, "S", "Sage")}>
+      <button onClick={() => addItem(getProduct("the-essential-oversized-shirt")!, "S", "White")}>
         add-dress
       </button>
       <button onClick={() => updateQty(items[0]!.key, 3)}>qty-3</button>

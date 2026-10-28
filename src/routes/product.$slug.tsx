@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { QuantityStepper } from "@/components/quantity-stepper";
 import { ProductCard } from "@/components/product-card";
+import { SizingHelper } from "@/components/sizing-helper";
 import { useCart } from "@/lib/cart";
 import { formatPKR } from "@/lib/format";
 import { categoryLabels, getProduct, related } from "@/lib/products";
@@ -176,6 +177,9 @@ function ProductPage() {
               </Link>
             </p>
           )}
+
+          <SizingHelper productSlug={product.slug} />
+
 
           {/* Details */}
           <div className="mt-10 border-t border-border pt-8">
