@@ -12,12 +12,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Premium, quiet-luxury womenswear: oversized shirts, wide-leg jeans, satin dresses and knit co-ord sets. Shop the collection from Outfit by FA.",
+          "Premium, quiet-luxury womenswear: oversized shirts, wide-leg jeans, graphic co-ord sets and outerwear. Shop the collection from Outfit by FA.",
       },
       { property: "og:title", content: "Outfit by FA — Premium Women's Clothing" },
       {
         property: "og:description",
-        content: "Oversized shirting, wide-leg denim and satin dresses in quiet neutrals.",
+        content: "Oversized shirting, wide-leg denim and graphic co-ord sets in quiet neutrals.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -50,8 +50,8 @@ function Index() {
           <img
             src={heroImage}
             alt="Model wearing the Essential Oversized Shirt with Noir Wide-Leg Jeans"
-            width={1600}
-            height={1072}
+            width={720}
+            height={723}
             className="h-full max-h-[70vh] w-full object-cover object-top lg:max-h-none"
           />
         </div>
