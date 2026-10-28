@@ -1,15 +1,20 @@
-import hero from "@/assets/hero.jpg";
-import whiteShirt from "@/assets/white-oversized-shirt.jpg";
-import blackJeans from "@/assets/black-wide-leg-jeans.jpg";
-import creamBlouse from "@/assets/cream-puff-blouse.jpg";
 import beigeTrousers from "@/assets/beige-wide-leg-trousers.jpg";
-import knitSet from "@/assets/oatmeal-knit-set.jpg";
-import sageDress from "@/assets/sage-satin-midi-dress.jpg";
+import blackJeans from "@/assets/black-wide-leg-jeans.jpg";
 import camelTrench from "@/assets/camel-trench-coat.jpg";
+import creamBlouse from "@/assets/cream-puff-blouse.jpg";
+import knitSet from "@/assets/oatmeal-knit-set.jpg";
+import whiteShirtLook from "@/assets/look-white-shirt-jeans.jpg.asset.json";
+import maroonShirt from "@/assets/shirt-maroon-oversized.jpg.asset.json";
+import setButterflyBlue from "@/assets/set-butterfly-blue.jpg.asset.json";
+import setButterflyWhite from "@/assets/set-butterfly-white.jpg.asset.json";
+import setPlanetPink from "@/assets/set-planet-pink.jpg.asset.json";
+import setFearlessMustard from "@/assets/set-fearless-mustard.jpg.asset.json";
+import setMmnfLilac from "@/assets/set-mmnf-lilac.jpg.asset.json";
+import skirtWashedDenim from "@/assets/skirt-washed-denim.jpg.asset.json";
 
-export const heroImage = hero;
+export const heroImage = whiteShirtLook.url;
 
-export type CategorySlug = "tops" | "bottoms" | "dresses" | "sets" | "outerwear";
+export type CategorySlug = "tops" | "bottoms" | "sets" | "outerwear";
 
 export type ColorOption = { name: string; hex: string };
 
@@ -30,7 +35,6 @@ export type Product = {
 export const categoryLabels: Record<CategorySlug, string> = {
   tops: "Tops",
   bottoms: "Bottoms",
-  dresses: "Dresses",
   sets: "Co-ord Sets",
   outerwear: "Outerwear",
 };
@@ -39,26 +43,20 @@ export const categories: { slug: CategorySlug; label: string; image: string; blu
   {
     slug: "tops",
     label: "Tops",
-    image: whiteShirt,
-    blurb: "Crisp shirting, soft blouses",
+    image: maroonShirt.url,
+    blurb: "Oversized shirting & soft blouses",
   },
   {
     slug: "bottoms",
     label: "Bottoms",
     image: blackJeans,
-    blurb: "Wide-leg jeans & tailored trousers",
-  },
-  {
-    slug: "dresses",
-    label: "Dresses",
-    image: sageDress,
-    blurb: "Fluid satin & occasion-ready",
+    blurb: "Wide-leg jeans, trousers & skirts",
   },
   {
     slug: "sets",
     label: "Co-ord Sets",
-    image: knitSet,
-    blurb: "Matching knits, styled for you",
+    image: setButterflyBlue.url,
+    blurb: "Matching tee & trouser sets",
   },
   {
     slug: "outerwear",
@@ -76,22 +74,40 @@ export const products: Product[] = [
     name: "The Essential Oversized Shirt",
     category: "tops",
     price: 3290,
-    image: whiteShirt,
+    image: whiteShirtLook.url,
     badge: "Signature",
     featured: true,
     description:
-      "The shirt that built the brand. Cut from crisp breathable cotton with dropped shoulders, a curved shirttail hem and cuffs that roll beautifully — designed to be worn oversized and lived in.",
+      "The shirt that built the brand. Cut oversized with dropped shoulders, a curved shirttail hem and cuffed sleeves — worn here with our washed-black wide-leg jeans, exactly as seen on the feed.",
     details: [
-      "100% breathable cotton poplin",
+      "Crisp oversized button-down shirt",
       "Relaxed oversized fit — size down for a classic fit",
       "Drop shoulders, rolled cuffs, curved hem",
-      "Model is 5'7\" wearing size S",
+      "Wear it buttoned, open over a tee, or belted",
     ],
     colors: [
       { name: "White", hex: "#fbfaf6" },
+      { name: "Maroon", hex: "#6d1f2c" },
       { name: "Black", hex: "#1d1b18" },
-      { name: "Beige", hex: "#d9c9b2" },
     ],
+    sizes: APPAREL_SIZES,
+  },
+  {
+    slug: "maroon-oversized-shirt",
+    name: "The Maroon Oversized Shirt",
+    category: "tops",
+    price: 3590,
+    image: maroonShirt.url,
+    badge: "New In",
+    description:
+      "A deep maroon take on the signature shirt. Full button-down with an easy drape, curved shirttail hem and sleeves that cuff beautifully — pairs effortlessly with washed-black denim.",
+    details: [
+      "Rich maroon woven fabric",
+      "Relaxed oversized fit",
+      "Full button placket, curved hem",
+      "Style it with our wide-leg jeans like the feed",
+    ],
+    colors: [{ name: "Maroon", hex: "#6d1f2c" }],
     sizes: APPAREL_SIZES,
   },
   {
@@ -103,12 +119,12 @@ export const products: Product[] = [
     badge: "Bestseller",
     featured: true,
     description:
-      "High-waisted, washed-black and dramatically wide. A structured rigid denim that holds its shape from waist to floor-length hem — the pair every outfit needs.",
+      "High-waisted, washed-black and dramatically wide. Structured denim that holds its shape from waist to floor-length hem — the pair every outfit needs.",
     details: [
-      "Rigid non-stretch denim, washed black",
+      "Structured denim, washed black",
       "High rise with button fly",
       "Wide leg, floor-grazing length",
-      "Model is 5'7\" wearing size S",
+      "Pairs with every top in the collection",
     ],
     colors: [
       { name: "Washed Black", hex: "#2b2926" },
@@ -158,6 +174,24 @@ export const products: Product[] = [
     sizes: APPAREL_SIZES,
   },
   {
+    slug: "washed-denim-maxi-skirt",
+    name: "Washed Denim Maxi Skirt",
+    category: "bottoms",
+    price: 4290,
+    image: skirtWashedDenim.url,
+    badge: "New In",
+    description:
+      "An A-line maxi skirt in soft washed blue denim with a centre-front seam, high waist and side pockets — the midi-maxi piece styled everywhere this season.",
+    details: [
+      "Washed blue denim",
+      "High waist, A-line silhouette",
+      "Centre-front seam, side pockets",
+      "Ankle-grazing maxi length",
+    ],
+    colors: [{ name: "Washed Blue", hex: "#8ba3b5" }],
+    sizes: APPAREL_SIZES,
+  },
+  {
     slug: "oatmeal-ribbed-knit-set",
     name: "Oatmeal Ribbed Knit Set",
     category: "sets",
@@ -176,25 +210,92 @@ export const products: Product[] = [
     sizes: APPAREL_SIZES,
   },
   {
-    slug: "sage-satin-midi-dress",
-    name: "Sage Satin Midi Dress",
-    category: "dresses",
-    price: 4790,
-    image: sageDress,
+    slug: "butterfly-tee-set-sky",
+    name: "Butterfly Tee Set — Sky Blue",
+    category: "sets",
+    price: 4690,
+    image: setButterflyBlue.url,
+    badge: "New In",
     featured: true,
     description:
-      "Liquid-soft satin in a muted sage, cut on the bias with a cowl neckline and delicate straps. Skims the body and pools just right at the midi hem.",
+      "A relaxed sky-blue tee with butterfly embroidery, styled with black wide-leg pull-on pants and a drawstring waist. The two-piece our feed can't stop wearing.",
     details: [
-      "Soft drapey satin fabric",
-      "Cowl neck, adjustable thin straps",
-      "Bias cut, midi length",
-      "Fully lined at the bodice",
+      "Soft cotton-blend tee in sky blue",
+      "Butterfly embroidery at the chest",
+      "Black wide-leg pants, elastic drawstring waist",
+      "Sold as a two-piece set",
     ],
-    colors: [
-      { name: "Sage", hex: "#a9b49a" },
-      { name: "Champagne", hex: "#e4d5bd" },
-      { name: "Noir", hex: "#1d1b18" },
+    colors: [{ name: "Sky Blue", hex: "#4db3e6" }],
+    sizes: APPAREL_SIZES,
+  },
+  {
+    slug: "butterfly-tee-set-white",
+    name: "Butterfly Tee Set — White",
+    category: "sets",
+    price: 4690,
+    image: setButterflyWhite.url,
+    description:
+      "The white version of the butterfly moment: oversized tee with embroidered detailing over black wide-leg pants. Effortless, matching, done.",
+    details: [
+      "Soft cotton-blend tee in white",
+      "Butterfly embroidery at the chest",
+      "Black wide-leg pants, elastic drawstring waist",
+      "Sold as a two-piece set",
     ],
+    colors: [{ name: "White", hex: "#fbfaf6" }],
+    sizes: APPAREL_SIZES,
+  },
+  {
+    slug: "planet-graphic-tee-set-pink",
+    name: "Planet Graphic Tee Set — Pink",
+    category: "sets",
+    price: 4490,
+    image: setPlanetPink.url,
+    description:
+      "Baby-pink tee with a lined planet-and-stars print, paired with flowing black wide-leg pants. Comfortable enough for class, cute enough for the feed.",
+    details: [
+      "Baby-pink cotton-blend tee",
+      "Planet & stars print",
+      "Black wide-leg pants, drawstring waist",
+      "Sold as a two-piece set",
+    ],
+    colors: [{ name: "Baby Pink", hex: "#eab6c4" }],
+    sizes: APPAREL_SIZES,
+  },
+  {
+    slug: "fearless-graphic-tee-set-mustard",
+    name: "Fearless Graphic Tee Set — Mustard",
+    category: "sets",
+    price: 4490,
+    image: setFearlessMustard.url,
+    description:
+      "A bold mustard tee with boxed 'Be Fearless, Be Strong, Be You' print over black wide-leg pants. The statement set that does the talking for you.",
+    details: [
+      "Mustard cotton-blend tee",
+      "Boxed slogan print",
+      "Black wide-leg pants, drawstring waist",
+      "Sold as a two-piece set",
+    ],
+    colors: [{ name: "Mustard", hex: "#d9a514" }],
+    sizes: APPAREL_SIZES,
+  },
+  {
+    slug: "statement-graphic-tee-set-lilac",
+    name: "Statement Graphic Tee Set — Lilac",
+    category: "sets",
+    price: 4490,
+    image: setMmnfLilac.url,
+    badge: "New In",
+    featured: true,
+    description:
+      "A lilac oversized tee with the 'Make Money Not Friends' print, matched with black wide-leg pants. Soft colour, sharp attitude.",
+    details: [
+      "Lilac cotton-blend tee",
+      "Oversized fit with graphic print",
+      "Black wide-leg pants, drawstring waist",
+      "Sold as a two-piece set",
+    ],
+    colors: [{ name: "Lilac", hex: "#c9a8e0" }],
     sizes: APPAREL_SIZES,
   },
   {
