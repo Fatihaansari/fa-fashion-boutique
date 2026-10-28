@@ -25,13 +25,13 @@ export const Route = createFileRoute("/shop")({
       {
         name: "description",
         content:
-          "Shop the full Outfit by FA collection — oversized shirts, wide-leg jeans, dresses, knit sets and outerwear.",
+          "Shop the full Outfit by FA collection — oversized shirts, wide-leg jeans, co-ord sets and outerwear.",
       },
       { property: "og:title", content: "Shop All — Outfit by FA" },
       {
         property: "og:description",
         content:
-          "Shop the full Outfit by FA collection — oversized shirts, wide-leg jeans, dresses, knit sets and outerwear.",
+          "Shop the full Outfit by FA collection — oversized shirts, wide-leg jeans, co-ord sets and outerwear.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

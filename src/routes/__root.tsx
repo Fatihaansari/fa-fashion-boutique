@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Curated womenswear in quiet, wearable neutrals — oversized shirting, wide-leg denim, satin dresses and knit sets. Outfit by FA, Karachi.",
+          "Curated womenswear in quiet, wearable neutrals — oversized shirting, wide-leg denim, co-ord sets and outerwear. Outfit by FA, Karachi.",
       },
       { property: "og:title", content: "Outfit by FA — Premium Women's Clothing" },
       {
