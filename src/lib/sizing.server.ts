@@ -35,12 +35,12 @@ export async function answerSizingQuestion(product: Product, question: string): 
   });
 
   const messages: ModelMessage[] = [
-    { role: "system", content: SYSTEM_PROMPT },
     { role: "user", content: `${buildSizingGrounding(product)}\n\nCUSTOMER QUESTION: ${question}` },
   ];
 
   const result = streamText({
     model: provider.responses(MODEL),
+    instructions: SYSTEM_PROMPT,
     messages,
     maxRetries: 0,
     providerOptions: {
