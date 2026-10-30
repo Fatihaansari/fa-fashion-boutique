@@ -17,7 +17,7 @@ function Probe() {
         add-shirt
       </button>
       <button onClick={() => addItem(getProduct("the-essential-oversized-shirt")!, "S", "White")}>
-        add-dress
+        add-second-shirt
       </button>
       <button onClick={() => updateQty(items[0]!.key, 3)}>qty-3</button>
       <button onClick={() => removeItem(items[0]!.key)}>remove-first</button>
@@ -37,14 +37,14 @@ describe("cart context", () => {
     act(() => {
       screen.getByText("add-shirt").click();
       screen.getByText("add-shirt").click();
-      screen.getByText("add-dress").click();
+      screen.getByText("add-second-shirt").click();
     });
 
-    // Two identical shirt lines merge into one; dress is a separate line.
+    // Two identical shirt lines merge into one; the S-size shirt is a separate line.
     expect(screen.getByTestId("lines").textContent).toBe("2");
     expect(screen.getByTestId("count").textContent).toBe("3");
-    // 2 x 3290 + 1 x 4790
-    expect(screen.getByTestId("subtotal").textContent).toBe("11370");
+    // 2 x 3290 + 1 x 3290
+    expect(screen.getByTestId("subtotal").textContent).toBe("9870");
   });
 
   it("updates quantity and removes lines", () => {
