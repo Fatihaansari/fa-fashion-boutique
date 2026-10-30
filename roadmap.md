@@ -14,3 +14,4 @@
 - [ ] Remove Dresses category + sage dress product
 - [ ] Add real product photos from user uploads (5 co-ord sets, maroon shirt, denim skirt, hero white-shirt look)
 - [ ] Premium polish pass (hero real photo, catalog consistency)
+- [ ] Responsive audit across pages (mobile/tablet widths)
