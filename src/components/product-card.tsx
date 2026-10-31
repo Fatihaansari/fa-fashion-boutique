@@ -32,7 +32,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
       <div className="mt-3.5 flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="eyebrow text-[0.55rem] text-muted-foreground">{categoryLabels[product.category]}</p>
-          <h3 className="mt-1 truncate font-display text-lg font-medium leading-snug">
+          <h3 className="mt-1 line-clamp-2 min-h-[2lh] font-display text-lg font-medium leading-snug">
             {product.name}
           </h3>
         </div>
