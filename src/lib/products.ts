@@ -13,7 +13,7 @@ const setFearlessMustard = "/images/set-fearless-mustard.jpg";
 const setMmnfLilac = "/images/set-mmnf-lilac.jpg";
 const skirtWashedDenim = "/images/skirt-washed-denim.jpg";
 
-export const heroImage = whiteShirtLook.url;
+export const heroImage = whiteShirtLook;
 
 export type CategorySlug = "tops" | "bottoms" | "sets" | "outerwear";
 
@@ -44,7 +44,7 @@ export const categories: { slug: CategorySlug; label: string; image: string; blu
   {
     slug: "tops",
     label: "Tops",
-    image: maroonShirt.url,
+    image: maroonShirt,
     blurb: "Oversized shirting & soft blouses",
   },
   {
@@ -56,7 +56,7 @@ export const categories: { slug: CategorySlug; label: string; image: string; blu
   {
     slug: "sets",
     label: "Co-ord Sets",
-    image: setButterflyBlue.url,
+    image: setButterflyBlue,
     blurb: "Matching tee & trouser sets",
   },
   {
@@ -98,7 +98,7 @@ export const products: Product[] = [
     name: "The Maroon Oversized Shirt",
     category: "tops",
     price: 3590,
-    image: maroonShirt.url,
+    image: maroonShirt,
     badge: "New In",
     description:
       "A deep maroon take on the signature shirt. Full button-down with an easy drape, curved shirttail hem and sleeves that cuff beautifully — pairs effortlessly with washed-black denim.",
@@ -179,7 +179,7 @@ export const products: Product[] = [
     name: "Washed Denim Maxi Skirt",
     category: "bottoms",
     price: 4290,
-    image: skirtWashedDenim.url,
+    image: skirtWashedDenim,
     badge: "New In",
     description:
       "An A-line maxi skirt in soft washed blue denim with a centre-front seam, high waist and side pockets — the midi-maxi piece styled everywhere this season.",
@@ -215,7 +215,7 @@ export const products: Product[] = [
     name: "Butterfly Tee Set — Sky Blue",
     category: "sets",
     price: 4690,
-    image: setButterflyBlue.url,
+    image: setButterflyBlue,
     badge: "New In",
     featured: true,
     description:
@@ -234,7 +234,7 @@ export const products: Product[] = [
     name: "Butterfly Tee Set — White",
     category: "sets",
     price: 4690,
-    image: setButterflyWhite.url,
+    image: setButterflyWhite,
     description:
       "The white version of the butterfly moment: oversized tee with embroidered detailing over black wide-leg pants. Effortless, matching, done.",
     details: [
@@ -251,7 +251,7 @@ export const products: Product[] = [
     name: "Planet Graphic Tee Set — Pink",
     category: "sets",
     price: 4490,
-    image: setPlanetPink.url,
+    image: setPlanetPink,
     description:
       "Baby-pink tee with a lined planet-and-stars print, paired with flowing black wide-leg pants. Comfortable enough for class, cute enough for the feed.",
     details: [
@@ -268,7 +268,7 @@ export const products: Product[] = [
     name: "Fearless Graphic Tee Set — Mustard",
     category: "sets",
     price: 4490,
-    image: setFearlessMustard.url,
+    image: setFearlessMustard,
     description:
       "A bold mustard tee with boxed 'Be Fearless, Be Strong, Be You' print over black wide-leg pants. The statement set that does the talking for you.",
     details: [
@@ -285,7 +285,7 @@ export const products: Product[] = [
     name: "Statement Graphic Tee Set — Lilac",
     category: "sets",
     price: 4490,
-    image: setMmnfLilac.url,
+    image: setMmnfLilac,
     badge: "New In",
     featured: true,
     description:
