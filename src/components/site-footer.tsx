@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail } from "lucide-react";
 
-import logoUrl from "@/assets/logo.png";
+const logoUrl = "/images/logo.png";
 import { categories } from "@/lib/products";
 
 export function SiteFooter() {
