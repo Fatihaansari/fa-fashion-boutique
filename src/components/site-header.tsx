@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { Instagram, Menu, ShoppingBag, X } from "lucide-react";
 
-import logoUrl from "@/assets/logo.png";
+const logoUrl = "/images/logo.png";
 import { useCart } from "@/lib/cart";
 import { categories } from "@/lib/products";
 

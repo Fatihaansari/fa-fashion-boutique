@@ -1,16 +1,17 @@
-import beigeTrousers from "@/assets/beige-wide-leg-trousers.jpg";
-import blackJeans from "@/assets/black-wide-leg-jeans.jpg";
-import camelTrench from "@/assets/camel-trench-coat.jpg";
-import creamBlouse from "@/assets/cream-puff-blouse.jpg";
-import knitSet from "@/assets/oatmeal-knit-set.jpg";
-import whiteShirtLook from "@/assets/look-white-shirt-jeans.jpg.asset.json";
-import maroonShirt from "@/assets/shirt-maroon-oversized.jpg.asset.json";
-import setButterflyBlue from "@/assets/set-butterfly-blue.jpg.asset.json";
-import setButterflyWhite from "@/assets/set-butterfly-white.jpg.asset.json";
-import setPlanetPink from "@/assets/set-planet-pink.jpg.asset.json";
-import setFearlessMustard from "@/assets/set-fearless-mustard.jpg.asset.json";
-import setMmnfLilac from "@/assets/set-mmnf-lilac.jpg.asset.json";
-import skirtWashedDenim from "@/assets/skirt-washed-denim.jpg.asset.json";
+/** All product imagery lives in public/images — plain paths, no bundler imports. */
+const beigeTrousers = "/images/beige-wide-leg-trousers.jpg";
+const blackJeans = "/images/black-wide-leg-jeans.jpg";
+const camelTrench = "/images/camel-trench-coat.jpg";
+const creamBlouse = "/images/cream-puff-blouse.jpg";
+const knitSet = "/images/oatmeal-knit-set.jpg";
+const whiteShirtLook = { url: "/images/look-white-shirt-jeans.jpg" };
+const maroonShirt = "/images/shirt-maroon-oversized.jpg";
+const setButterflyBlue = "/images/set-butterfly-blue.jpg";
+const setButterflyWhite = "/images/set-butterfly-white.jpg";
+const setPlanetPink = "/images/set-planet-pink.jpg";
+const setFearlessMustard = "/images/set-fearless-mustard.jpg";
+const setMmnfLilac = "/images/set-mmnf-lilac.jpg";
+const skirtWashedDenim = "/images/skirt-washed-denim.jpg";
 
 export const heroImage = whiteShirtLook.url;
 
