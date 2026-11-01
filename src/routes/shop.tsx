@@ -84,7 +84,7 @@ function Shop() {
         {items.length} {items.length === 1 ? "piece" : "pieces"}
       </p>
 
-      <div className="mt-4 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
         {items.map((p, i) => (
           <ProductCard key={p.slug} product={p} priority={i < 4} />
         ))}

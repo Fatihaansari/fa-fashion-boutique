@@ -112,7 +112,7 @@ function Index() {
             View all
           </Link>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-6 md:grid-cols-3 lg:grid-cols-5">
           {categories.map((c) => (
             <Link
               key={c.slug}
@@ -144,7 +144,7 @@ function Index() {
             <p className="eyebrow text-muted-foreground">Loved on the feed</p>
             <h2 className="mt-2 font-display text-4xl font-medium sm:text-5xl">Bestsellers</h2>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
             {featured.map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}
@@ -156,7 +156,7 @@ function Index() {
       {shirt && jeans && (
         <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               <Link to="/product/$slug" params={{ slug: shirt.slug }} className="group block overflow-hidden bg-muted">
                 <img
                   src={shirt.image}
