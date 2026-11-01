@@ -75,7 +75,7 @@ export const products: Product[] = [
     name: "The Essential Oversized Shirt",
     category: "tops",
     price: 3290,
-    image: whiteShirtLook.url,
+    image: whiteShirtLook,
     badge: "Signature",
     featured: true,
     description:
